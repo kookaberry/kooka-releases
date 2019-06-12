@@ -7,3 +7,5 @@ the board in the Python programming language.
 
 Here you can find official releases of the Kookaberry firmware and the
 Kookaberry IDE.
+
+For documentation see: <http://docs.micropython.org/en/kookaberry/kookaberry/quickref.html>
