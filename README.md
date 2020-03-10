@@ -6,7 +6,18 @@ Australian schools.  It runs MicroPython which allows you to easily program
 the board in the Python programming language.
 
 Here you can find official releases of the Kookaberry firmware and the
-Kookaberry IDE.
+Kookaberry PC Suite, which includes an IDE, a Teacher's Window and a
+Blockly editor.
+
+The latest release packages can be found at: <https://github.com/kookaberry/kooka-releases/releases>
+
+Individual files can be found by browsing this repository, in the following
+directories:
+
+- `KookaSuite/` contains executable installation files for Windows and macOS
+  versions of the Kookaberry PC Suite.
+- `firmware/` contains the firmware that goes on the Kookaberry board.
+- `lib/` contains various libraries/modules for use on the Kookaberry board.
 
 For documentation see: <http://docs.micropython.org/en/kookaberry/kookaberry/quickref.html>
 
