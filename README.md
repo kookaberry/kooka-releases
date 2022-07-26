@@ -28,6 +28,7 @@ The firmware files are:
 - f103.bin -- firmware for the F103
 - f091.bin -- firmware for the F091
 - nrf5.bin -- firmware for the nRF51
+- l476.bin -- firmware for the L476
 
 Installation:
 
@@ -39,12 +40,13 @@ Installation:
    mode, otherwise it is in normal mode.  In both cases files can be copied to
    the device for an upgrade.
 
-3) Copy f103.bin, f091.bin, nrf5.bin to the root of the drive.
+3) Copy f103.bin, f091.bin, nrf5.bin to the root of the drive (use l476.bin instead
+   of f091.bin on Kookaberry L476 boards).
 
 4) Unplug and re-plug the device from USB.
 
 5) The blue LED should flash for about 30 seconds while it prgrams the F103,
-   F091 and nRF51.
+   F091 (or L476) and nRF51.
 
 6) Once the blue LED stops flashing the device should be ready to use.
 
@@ -56,8 +58,8 @@ Usage
   Everything else is disabled.  This mode is indicated by the blue LED blinking
   once every second.  To get out of this mode unplug the device from USB.
 
-- Press "RESET" when the device is powered on to perform a hard reset of the F091
-  and the nRF51822.
+- Press "RESET" when the device is powered on to perform a hard reset of the
+  F091/L476 and the nRF51822.
 
 - If the supply voltage is very low (less than 2.5V) upon power up then the blue
   LED will pulse slowly and the device will be completely disabled.
