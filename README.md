@@ -16,15 +16,16 @@ directories:
 
 - `KookaSuite/` contains executable installation files for Windows and macOS
   versions of the Kookaberry PC Suite.
-- `firmware/` contains the firmware that goes on the Kookaberry board.
+- `firmware/stm32` contains the firmware that goes on STM32 Kookaberry boards.
+- `firmware/rp2040` contains the firmware that goes on RP2040 Kookaberry boards.
 - `lib/` contains various libraries/modules for use on the Kookaberry board.
 
 For documentation see: <http://docs.micropython.org/en/kookaberry/kookaberry/quickref.html>
 
-Firmware upgrade
-----------------
+Firmware upgrade for STM32 Kookaberry
+-------------------------------------
 
-The firmware files are:
+The firmware files in `firmware/stm32` are:
 - f103.bin -- firmware for the F103
 - f091.bin -- firmware for the F091
 - nrf5.bin -- firmware for the nRF51
@@ -49,6 +50,30 @@ Installation:
    F091 (or L476) and nRF51.
 
 6) Once the blue LED stops flashing the device should be ready to use.
+
+Firmware upgrade for RP2040 Kookaberry
+--------------------------------------
+
+The firmware files in `firmware/rp2040` are:
+- kooka_rp2040_mboot.uf2 -- the bootloader
+- kooka_rp2040.bin -- the main Kookaberry application firmware
+
+Installation:
+
+1) Get the device into low-level bootloader mode by holding down the BOOTSEL button
+   while plugging in the device in to USB.
+
+2) The device should appear as USB mass storage.  Copy kooka_rp2040_mboot.uf2 to this
+   mass storage device.  Once the file is copied, eject the drive and unplug and
+   replug it into USB.
+
+4) The device should appear again as USB mass storage.  Now copy kooka_rp2040.bin to
+   the mass storage device.  The on-board LED should flash while it's copying.  Once
+   the file is copied, eject the drive and unplug and replug it into USB.  The LED
+   should flash again while it updates the main firmware.
+
+5) Once all the copying is complete the device should appear over USB as both mass
+   storage and a serial port.
 
 Usage
 -----
